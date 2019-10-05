@@ -41,6 +41,7 @@ cv2.imwrite(filename, gray)
 
 # load the image as a PIL/Pillow image, apply OCR, and then delete
 # the temporary file
+pytesseract.tesseract_cmd = r'C:\Users\Win7_User\AppData\Local\Programs\Python\Python37-32\scripts\pytesseract.exe'
 text = pytesseract.image_to_string(Image.open(filename))
 os.remove(filename)
 print(text)
